@@ -209,11 +209,60 @@ Skills, MCP, collaboration / 技能、MCP、协作
 
 ---
 
+## 🙏 Acknowledgments / 致谢
+
+This guide is based on the amazing work from the following repositories:
+本指南基于以下仓库的优秀工作：
+
+### 📦 Source Repositories / 源仓库
+
+#### 🎯 [obra/superpowers](https://github.com/obra/superpowers)
+**Complete SDLC workflow skills / 完整SDLC工作流技能**
+
+- Provides 14 skills for systematic software development
+- 提供14个系统化软件开发技能
+- Focus on quality-driven development with two-stage reviews
+- 专注于质量驱动的开发和双阶段审查
+- **Skills included / 包含技能**: brainstorming, writing-plans, subagent-driven-development, test-driven-development, systematic-debugging, code reviews, git worktrees, and more
+- **Author**: [@obra](https://github.com/obra)
+
+#### 🤖 [anthropics/skills](https://github.com/anthropics/skills)
+**Official example skills by Anthropic / Anthropic 官方示例技能**
+
+- Provides 16 skills for various use cases
+- 提供16个不同使用场景的技能
+- Covers document processing, web development, visual media, and tools
+- 涵盖文档处理、Web开发、视觉媒体和工具
+- **Skills included / 包含技能**: pdf, docx, pptx, xlsx, webapp-testing, frontend-design, algorithmic-art, slack-gif-creator, theme-factory, and more
+- **Author**: [Anthropic](https://github.com/anthropics)
+
+#### 🌟 [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)
+**Community-curated list of Claude skills / 社区策划的Claude技能列表**
+
+- Comprehensive collection of Claude skills
+- Claude技能的综合集合
+- Curated resources and examples
+- 策选的资源和示例
+- **Maintainer**: [ComposioHQ](https://github.com/ComposioHQ)
+
+---
+
 ## 🔗 Resources / 资源
 
-- 📖 [Original obra/superpowers repository](https://github.com/obra/superpowers)
-- 📖 [Original anthropics/skills repository](https://github.com/anthropics/skills)
+### 📚 Original Reposories / 原始仓库
+- 📖 [obra/superpowers](https://github.com/obra/superpowers) - Systematic development workflow
+- 📖 [anthropics/skills](https://github.com/anthropics/skills) - Official example skills
+- 📖 [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) - Community collection
+
+### 📖 Documentation / 文档
 - 📖 [Claude Code Documentation](https://docs.anthropic.com/claude-code)
+- 📖 [Claude Documentation](https://docs.anthropic.com/claude)
+
+### 🌐 Community / 社区
+- 💬 [Claude Discord](https://discord.gg/anthropic)
+- 🐦 [Claude Twitter](https://twitter.com/AnthropicAI)
+
+---
 
 ---
 
