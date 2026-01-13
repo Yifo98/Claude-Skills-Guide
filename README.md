@@ -267,10 +267,6 @@ This guide is based on the amazing work from the following repositories:
 - 📖 [Claude Code Documentation](https://docs.anthropic.com/claude-code)
 - 📖 [Claude Documentation](https://docs.anthropic.com/claude)
 
-### 🌐 Community / 社区
-- 💬 [Claude Discord](https://discord.gg/anthropic)
-- 🐦 [Claude Twitter](https://twitter.com/AnthropicAI)
-
 ---
 
 ---
@@ -282,12 +278,6 @@ This guide is based on the amazing work from the following repositories:
 | 2025-01-13 | Initial deployment of 30 skills / 30 个技能的初始部署 |
 | 2025-01-13 | Created comprehensive bilingual guides / 创建全面的双语指南 |
 | 2025-01-13 | Added Research & Advanced Workflows skills (2) / 添加研究与高级工作流技能（2个） |
-
----
-
-__🌟 Star this repository if you find it helpful!__
-
-__如果这个仓库对你有帮助，请给个Star支持一下！__
 
 ---
 
