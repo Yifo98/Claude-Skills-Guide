@@ -22,7 +22,7 @@
 
 ---
 
-## 🎯 所有技能通俗解释 / All Skills Explained Simply
+## 🎯 所有51个技能通俗解释 / All Skills Explained Simply
 
 ---
 

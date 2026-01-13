@@ -6,9 +6,9 @@ __Comprehensive bilingual guide for Claude Code skills__
 
 __Claude Code 技能的全面双语指南__
 
-![GitHub repo size](https://img.shields.io/badge/skills-32-blue)
+![GitHub repo size](https://img.shields.io/badge/skills-51-blue)
 ![GitHub language count](https://img.shields.io/badge/format-markdown-purple)
-![GitHub last commit](https://img.shields.io/badge/status-complete-green)
+![GitHub last commit](https://img.shields.io/badge/status-updated-green)
 
 ---
 
@@ -185,7 +185,7 @@ Persistent planning, AI-powered research / 持久化规划、AI 驱动研究
 ---
 
 ### 📚 [Quick Reference - 快速参考](./QUICK_REFERENCE_ALL_SKILLS.md)
-所有32个技能的一页总览 / One-page overview of all 32 skills
+所有51个技能的一页总览 / One-page overview of all 32 skills
 
 ---
 
