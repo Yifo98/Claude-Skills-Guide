@@ -1,10 +1,35 @@
 # 🚀 Claude Skills 快速参考 / Quick Reference
 
+## 📑 目录导航 / Table of Contents
+
+<details>
+<summary><strong>📖 点击展开目录 / Click to Expand</strong></summary>
+
+### 🎯 按类别浏览 / Browse by Category
+- [📂 软件开发技能（14个）](#-软件开发技能14个-software-development-14)
+- [📄 文档处理技能（4个）](#-文档处理技能4个-document-processing-4)
+- [🌐 Web开发技能（3个）](#-web开发技能3个-web-development-3)
+- [🎨 视觉媒体技能（4个）](#-视觉媒体技能4个-visual--media-4)
+- [📚 研究与高级工作流技能（2个）](#-研究与高级工作流技能2个-research--advanced-workflows-2)
+- [🔧 工具技能（5个）](#-工具技能5个-tools-5)
+
+### 🎯 按用途查找 / Find by Purpose
+- [📊 使用场景总览](#-使用场景总览-usage-scenarios-overview)
+- [💡 快速查找指南](#-快速查找指南-quick-find-guide)
+- [🎯 技能组合建议](#-技能组合建议-skill-combinations)
+
+</details>
+
+---
+
 ## 🎯 所有技能通俗解释 / All Skills Explained Simply
 
 ---
 
 ## 📂 软件开发技能（14个） / Software Development (14)
+
+<details>
+<summary><strong>📖 点击展开/折叠 / Click to Expand/Collapse</strong></summary>
 
 ### 🧠 Brainstorming / 头脑风暴
 
@@ -112,22 +137,6 @@ Claude 会自动使用 subagent-driven-development
 为每个任务分配新的子代理，并进行双重审查
 ```
 
-**举例 / Example**:
-```
-计划：做用户认证功能
-
-流程：
-任务1：实现OAuth登录
-  📤 派个新助手来做
-  ✅ 做完了
-  👁️ 第一次审查：符合计划吗？✓
-  👁️ 第二次审查：代码质量好吗？有个小问题
-  🔧 修复问题
-  ➡️ 继续下一个任务
-
-每个任务都严格检查，不会留下隐患！
-```
-
 ---
 
 ### 🧪 Test-Driven Development / 测试驱动开发
@@ -153,31 +162,6 @@ Claude 会自动使用 subagent-driven-development
 1. 先写失败的测试
 2. 写最小代码让测试通过
 3. 重构优化代码
-```
-
-**举例 / Example**:
-```
-要写一个"加用户"功能
-
-🔴 RED - 先写测试（会失败）
-def test_add_user():
-    result = add_user("Alice")
-    assert result.id is not None
-运行：❌ 失败（函数还不存在）
-
-🟢 GREEN - 写最小代码让测试通过
-def add_user(name):
-    user = User(name=name).save()
-    return user
-运行：✅ 通过
-
-🔵 REFACTOR - 优化代码
-def add_user(name: str) -> User:
-    """添加新用户到数据库"""
-    if not name:
-        raise ValueError("名字不能为空")
-    return User(name=name).save()
-运行：✅ 还是通过，但代码更好了
 ```
 
 ---
@@ -206,33 +190,6 @@ Claude 会自动使用 executing-plans 技能
 每3个任务进行一次代码审查检查点
 ```
 
-**举例 / Example**:
-```
-计划：9个任务
-
-📦 第1批（任务1-3）：
-  ✅ 任务1
-  ✅ 任务2
-  ✅ 任务3
-  ⏸️ 检查点：代码审查
-  👉 发现小问题，但不影响继续
-
-📦 第2批（任务4-6）：
-  ✅ 任务4
-  ✅ 任务5
-  ✅ 任务6
-  ⏸️ 检查点：代码审查
-  👉 发现重要问题，修复后再继续
-
-📦 第3批（任务7-9）：
-  ✅ 任务7
-  ✅ 任务8
-  ✅ 任务9
-  ⏸️ 最终检查：全部完成！
-
-不会等到最后才发现前面做错了！
-```
-
 ---
 
 ### ✅ Verification Before Completion / 完成前验证
@@ -259,22 +216,6 @@ Claude 会自动使用 verification-before-completion
 进行系统化验证
 ```
 
-**举例 / Example**:
-```
-Bug："登录时特殊字符会失败"
-
-修复：添加了密码编码
-
-验证流程：
-1️⃣ 重现bug：用"p@ss!123"登录 → 失败 ✓
-2️⃣ 应用修复：添加base64编码
-3️⃣ 测试修复：用"p@ss!123"登录 → 成功 ✓
-4️⃣ 检查副作用：普通密码还能用吗？→ 能 ✓
-5️⃣ 关闭bug：✓ 已验证
-
-而不是："我觉得应该修好了" → 关闭 ❌
-```
-
 ---
 
 ### 🎬 Finishing Development Branch / 完成开发分支
@@ -298,29 +239,6 @@ Bug："登录时特殊字符会失败"
 告诉 Claude："这个分支做完了，怎么处理？"
 Claude 会使用 finishing-a-development-branch
 帮你选择最合适的结束方式
-```
-
-**举例 / Example**:
-```
-分支：feature/user-auth
-状态：所有任务完成，测试通过
-
-选项选择：
-1️⃣ 直接合并（小改动，风险低）
-   → git merge feature/user-auth
-   → 删除分支
-
-2️⃣ 创建PR（大改动，需要审查）
-   → 创建Pull Request
-   → 写清楚改了什么
-   → 等同事审查
-   → 审查通过后合并
-
-3️⃣ 丢弃分支（实验失败，有更好的方案）
-   → 直接删除分支
-   → 不合并
-
-选择合适的结束方式，保持代码库整洁！
 ```
 
 ---
@@ -349,25 +267,6 @@ Claude 会自动调用 requesting-code-review
 进行系统化的代码审查
 ```
 
-**举例 / Example**:
-```
-刚做完：任务2 - 添加验证函数
-
-请求代码审查：
-📋 做了什么：验证和修复函数
-📋 计划是什么：部署计划的任务2
-📋 代码范围：a7981ec 到 3df7661
-
-审查结果：
-✅ 优点：架构清晰，有真实测试
-⚠️ 问题：
-  重要：缺少进度指示器
-  次要：魔法数字 100
-📊 评估：可以继续
-
-行动：修复进度指示器，然后继续
-```
-
 ---
 
 ### 📥 Receiving Code Review / 接收代码审查
@@ -386,42 +285,6 @@ Claude 会自动调用 requesting-code-review
 - 需要回应建议时
 - 不确定建议是否正确时
 - 需要讨论技术方案时
-
-**怎么用 / How to Use**:
-```
-收到审查反馈后，告诉 Claude："帮我分析这些建议"
-Claude 会使用 receiving-code-review
-帮你技术性地评估每条建议
-```
-
-**举例 / Example**:
-```
-审查者建议："用 async/await 代替 Promise"
-
-你的分析：
-- 当前代码用 .then() 链
-- 工作正常，测试通过
-- async/await 确实更易读
-
-决定：✅ 接受建议
-行动：重构为 async/await
-学习：新代码优先用 async/await
-
----
-
-审查者建议："删除 console.log"
-
-你的分析：
-- 这些是有意的调试日志
-- 帮助排查生产问题
-- 文档中有说明
-
-决定：❌ 礼貌反驳
-理由：
-- 这是生产调试工具
-- 不是偶然的调试语句
-- 已在文档中说明
-```
 
 ---
 
@@ -442,33 +305,6 @@ Claude 会使用 receiving-code-review
 - 不确定哪种方法好时
 - 需要新思路时
 
-**怎么用 / How to Use**:
-```
-告诉 Claude："用几个不同的方案解决这个问题"
-Claude 会使用 dispatching-parallel-agents
-同时运行多个子代理探索不同方案
-```
-
-**举例 / Example**:
-```
-问题："优化慢的数据库查询"
-
-🤖 助手1（分析执行计划）：
-  → 建议：添加索引
-  → 预计提升：10倍
-
-🤖 助手2（重构查询结构）：
-  → 建议：优化JOIN逻辑
-  → 预计提升：5倍
-
-🤖 助手3（研究缓存方案）：
-  → 建议：使用Redis缓存
-  → 预计提升：100倍
-  → 复杂度：高
-
-比较结果：助手1方案简单效果好，选它！
-```
-
 ---
 
 ### 🌳 Using Git Worktrees / 使用Git Worktrees
@@ -487,29 +323,6 @@ Claude 会使用 dispatching-parallel-agents
 - 紧急修复时
 - 测试不同方案时
 - 审查代码时还在开发
-
-**怎么用 / How to Use**:
-```
-告诉 Claude："我想同时在多个分支上工作"
-Claude 会使用 using-git-worktrees
-帮你设置多个工作目录
-```
-
-**举例 / Example**:
-```
-目录结构：
-my-project/         ← 主分支（main）
-my-project-auth/    ← 认证功能分支
-my-project-ui/      ← UI功能分支
-my-project-fix/     ← 紧急修复分支
-
-使用场景：
-1. 在 my-project-auth/ 开发登录功能
-2. 突然需要紧急修复
-3. 切换到 my-project-fix/ 修复
-4. 修复完了，切回 my-project-auth/ 继续开发
-   （不需要 stash/pop，状态都保留着！）
-```
 
 ---
 
@@ -537,33 +350,6 @@ Claude 会使用 systematic-debugging
 有条理地排查问题
 ```
 
-**举例 / Example**:
-```
-Bug："用户登录间歇性失败"
-
-1️⃣ 理解问题：
-   - 重现：10%的概率失败
-   - 特定密码模式才会触发
-   - 没有错误信息
-
-2️⃣ 形成假设：
-   - 假设1：竞态条件
-   - 假设2：密码编码问题
-   - 假设3：数据库连接超时
-
-3️⃣ 测试假设：
-   - 测试假设1：加延迟 → 没效果
-   - 测试假设2：记录编码 → 发现特殊字符失败
-   - 假设2被证实！
-
-4️⃣ 修复验证：
-   - 添加特殊字符转义
-   - 验证：100次登录全部成功
-   - 关闭bug ✓
-
-而不是："试试改这个...再试试改那个..."
-```
-
 ---
 
 ### 📘 Using Superpowers / Superpowers使用指南
@@ -582,31 +368,6 @@ Bug："用户登录间歇性失败"
 - 不清楚用哪个技能时
 - 想了解最佳实践时
 - 遇到问题时
-
-**怎么用 / How to Use**:
-```
-随时可以问 Claude："这些技能怎么配合使用？"
-Claude 会使用 using-superpowers
-解释技能之间的协作关系
-```
-
-**举例 / Example**:
-```
-完整工作流：
-💡 想法 → brainstorming
-📋 计划 → writing-plans
-🚀 实施 → subagent-driven-development → test-driven-development
-👁️ 审查 → requesting-code-review
-✅ 验证 → verification-before-completion
-🎬 完成 → finishing-a-development-branch
-
-危险信号：
-❌ 跳过代码审查技能
-❌ 复杂任务不头脑风暴
-❌ 错误使用TDD（先写代码）
-
-技能会自动识别上下文并调用！
-```
 
 ---
 
@@ -627,35 +388,16 @@ Claude 会使用 using-superpowers
 - 技能文档过时时
 - 分享技能给他人时
 
-**怎么用 / How to Use**:
-```
-创建新技能时，告诉 Claude："帮我创建一个技能"
-Claude 会使用 writing-skills
-用TDD方法编写技能文档
-```
+</details>
 
-**举例 / Example**:
-```
-🔴 RED - 使用技能
-  在真实场景中使用新技能
-  → 发现：文档中少了错误处理说明
-
-🟢 GREEN - 编写文档
-  添加错误处理章节
-  → 覆盖识别的差距
-
-🔵 REFACTOR - 优化文档
-  提高清晰度
-  添加示例
-  完善结构
-  → 文档更好了
-
-而不是：先写一堆理论文档，结果发现跟实际使用不一样
-```
+[⬆️ 回到顶部 / Back to Top](#-claude-skills-快速参考--quick-reference)
 
 ---
 
 ## 📄 文档处理技能（4个） / Document Processing (4)
+
+<details>
+<summary><strong>📖 点击展开/折叠 / Click to Expand/Collapse</strong></summary>
 
 ### 📕 PDF / PDF文档处理
 
@@ -678,19 +420,6 @@ Claude 会使用 writing-skills
 ```
 告诉 Claude："分析这个PDF文件"
 Claude 会使用 pdf 技能提取和处理内容
-```
-
-**举例 / Example**:
-```
-文件：财务报告.pdf
-
-操作：
-1️⃣ 提取所有表格
-2️⃣ 提取文本内容
-3️⃣ 识别关键数据
-4️⃣ 导出到Excel分析
-
-结果：所有财务数据结构化提取，方便分析
 ```
 
 ---
@@ -718,21 +447,6 @@ Claude 会使用 pdf 技能提取和处理内容
 Claude 会使用 docx 技能创建文档
 ```
 
-**举例 / Example**:
-```
-任务：自动生成月度报告
-
-操作：
-1️⃣ 创建文档
-2️⃣ 添加标题和段落
-3️⃣ 插入数据表格
-4️⃣ 添加图表
-5️⃣ 应用格式
-6️⃣ 保存 report.docx
-
-结果：专业的Word报告自动生成
-```
-
 ---
 
 ### 📘 PPTX / PowerPoint创建编辑
@@ -756,21 +470,6 @@ Claude 会使用 docx 技能创建文档
 ```
 告诉 Claude："制作一个PowerPoint演示"
 Claude 会使用 pptx 技能创建演示文稿
-```
-
-**举例 / Example**:
-```
-任务：销售数据演示
-
-操作：
-1️⃣ 标题幻灯片
-2️⃣ 数据概览页
-3️⃣ 图表展示页
-4️⃣ 结论页
-5️⃣ 应用主题
-6️⃣ 保存 presentation.pptx
-
-结果：专业的演示文稿自动生成
 ```
 
 ---
@@ -798,24 +497,16 @@ Claude 会使用 pptx 技能创建演示文稿
 Claude 会使用 xlsx 技能处理电子表格
 ```
 
-**举例 / Example**:
-```
-任务：销售数据报表
+</details>
 
-操作：
-1️⃣ 创建工作簿
-2️⃣ 添加数据行
-3️⃣ 添加公式（总计、平均）
-4️⃣ 创建柱状图
-5️⃣ 应用格式
-6️⃣ 保存 sales.xlsx
-
-结果：专业的Excel报表自动生成
-```
+[⬆️ 回到顶部 / Back to Top](#-claude-skills-快速参考--quick-reference)
 
 ---
 
 ## 🌐 Web开发技能（3个） / Web Development (3)
+
+<details>
+<summary><strong>📖 点击展开/折叠 / Click to Expand/Collapse</strong></summary>
 
 ### 💻 Frontend Design / 前端UI/UX设计
 
@@ -839,19 +530,6 @@ Claude 会使用 xlsx 技能处理电子表格
 告诉 Claude："帮我设计这个页面"
 Claude 会使用 frontend-design 技能
 创建 React + Tailwind 组件
-```
-
-**举例 / Example**:
-```
-任务：设计登录表单
-
-结果：
-- React 组件结构
-- Tailwind CSS 样式
-- 渐变背景
-- 表单验证
-- 响应式设计
-- 完整可运行的代码
 ```
 
 ---
@@ -880,21 +558,6 @@ Claude 会使用 web-artifacts-builder 技能
 创建完整的HTML构件项目
 ```
 
-**举例 / Example**:
-```
-任务：创建数据仪表板
-
-步骤：
-1️⃣ npm create vite 创建项目
-2️⃣ 安装 Tailwind CSS
-3️⃣ 创建仪表板组件
-4️⃣ 添加图表和表格
-5️⃣ npm run build 构建
-6️⃣ 部署到生产
-
-结果：生产就绪的HTML构件
-```
-
 ---
 
 ### 🧪 WebApp Testing / Web应用测试
@@ -921,25 +584,16 @@ Claude 会使用 webapp-testing 技能
 编写Playwright测试
 ```
 
-**举例 / Example**:
-```
-任务：测试登录功能
+</details>
 
-测试代码：
-1️⃣ 打开登录页面
-2️⃣ 填写用户名和密码
-3️⃣ 点击登录按钮
-4️⃣ 验证跳转到首页
-5️⃣ 截图保存
-
-运行测试：
-npx playwright test
-结果：所有测试通过 ✓
-```
+[⬆️ 回到顶部 / Back to Top](#-claude-skills-快速参考--quick-reference)
 
 ---
 
 ## 🎨 视觉媒体技能（4个） / Visual & Media (4)
+
+<details>
+<summary><strong>📖 点击展开/折叠 / Click to Expand/Collapse</strong></summary>
 
 ### 🎨 Algorithmic Art / 算法艺术
 
@@ -963,19 +617,6 @@ npx playwright test
 告诉 Claude："创建一些算法艺术"
 Claude 会使用 algorithmic-art 技能
 生成艺术作品
-```
-
-**举例 / Example**:
-```
-任务：生成几何艺术
-
-操作：
-1️⃣ 使用Perlin噪声
-2️⃣ 生成随机几何图形
-3️⃣ 应用颜色渐变
-4️⃣ 保存为PNG
-
-结果：独特的生成艺术作品
 ```
 
 ---
@@ -1004,20 +645,6 @@ Claude 会使用 canvas-design 技能
 创建Canvas艺术
 ```
 
-**举例 / Example**:
-```
-任务：创建动态波浪效果
-
-操作：
-1️⃣ 创建Canvas元素
-2️⃣ 使用requestAnimationFrame
-3️⃣ 绘制动态波浪
-4️⃣ 添加颜色渐变
-5️⃣ 响应鼠标交互
-
-结果：流畅的动画效果
-```
-
 ---
 
 ### 🎞️ Slack GIF Creator / Slack GIF创建器
@@ -1042,20 +669,6 @@ Claude 会使用 canvas-design 技能
 告诉 Claude："创建一个Slack GIF"
 Claude 会使用 slack-gif-creator 技能
 生成优化的GIF动画
-```
-
-**举例 / Example**:
-```
-任务：创建庆祝动画
-
-操作：
-1️⃣ 设计12帧动画
-2️⃣ 尺寸：128x128像素
-3️⃣ 帧率：15fps
-4️⃣ 优化颜色
-5️⃣ 保存celebrate.gif
-
-结果：Slack团队专用的庆祝emoji
 ```
 
 ---
@@ -1090,23 +703,16 @@ Claude 会使用 theme-factory 技能
 应用专业主题样式
 ```
 
-**举例 / Example**:
-```
-任务：为文档应用主题
+</details>
 
-操作：
-1️⃣ 选择：午夜银河
-2️⃣ 应用颜色：深蓝#1E3A8A、紫色#8B5CF6
-3️⃣ 应用字体：Inter，现代科技感
-4️⃣ 调整样式
-5️⃣ 预览效果
-
-结果：专业的深色主题文档
-```
+[⬆️ 回到顶部 / Back to Top](#-claude-skills-快速参考--quick-reference)
 
 ---
 
 ## 📚 研究与高级工作流技能（2个） / Research & Advanced Workflows (2)
+
+<details>
+<summary><strong>📖 点击展开/折叠 / Click to Expand/Collapse</strong></summary>
 
 ### 🗂️ Planning with Files / 文件规划
 
@@ -1223,9 +829,16 @@ Claude 会自动创建三个文件：
 - 免费版每日查询限制（50次/天）
 - 需要手动上传文档到 NotebookLM
 
+</details>
+
+[⬆️ 回到顶部 / Back to Top](#-claude-skills-快速参考--quick-reference)
+
 ---
 
 ## 🔧 工具技能（5个） / Tools (5)
+
+<details>
+<summary><strong>📖 点击展开/折叠 / Click to Expand/Collapse</strong></summary>
 
 ### 🛠️ Skill Creator / 技能创建器
 
@@ -1249,20 +862,6 @@ Claude 会自动创建三个文件：
 告诉 Claude："帮我创建一个新技能"
 Claude 会使用 skill-creator 技能
 创建符合标准的技能文件
-```
-
-**举例 / Example**:
-```
-任务：创建数据分析技能
-
-步骤：
-1️⃣ 创建技能目录
-2️⃣ 编写YAML元数据
-3️⃣ 添加文档说明
-4️⃣ 编写使用示例
-5️⃣ 部署到skills目录
-
-结果：新技能立即可用
 ```
 
 ---
@@ -1291,20 +890,6 @@ Claude 会使用 mcp-builder 技能
 创建MCP服务器代码
 ```
 
-**举例 / Example**:
-```
-任务：数据库MCP服务器
-
-步骤：
-1️⃣ 创建MCP服务器
-2️⃣ 定义query_database工具
-3️⃣ 定义db://tables资源
-4️⃣ 实现错误处理
-5️⃣ 启动服务器
-
-结果：Claude可以直接查询数据库
-```
-
 ---
 
 ### 🤝 Doc Coauthoring / 文档协作
@@ -1329,21 +914,6 @@ Claude 会使用 mcp-builder 技能
 告诉 Claude："帮我协作编辑这个文档"
 Claude 会使用 doc-coauthoring 技能
 管理协作编辑流程
-```
-
-**举例 / Example**:
-```
-任务：团队编写项目提案
-
-协作流程：
-1️⃣ 创建文档
-2️⃣ @alice 审查时间线
-3️⃣ @bob 澄清阶段3
-4️⃣ 收集所有反馈
-5️⃣ 整合意见
-6️⃣ 最终定稿
-
-结果：团队共识的完整提案
 ```
 
 ---
@@ -1372,24 +942,6 @@ Claude 会使用 internal-comms 技能
 生成专业的沟通模板
 ```
 
-**举例 / Example**:
-```
-任务：项目进度更新
-
-模板：
-📊 项目：用户认证系统
-状态：按计划进行
-已完成：
-✅ OAuth集成
-✅ 用户模型
-进行中：
-🔄 JWT中间件
-阻碍：
-🚂 无
-
-结果：清晰专业的进度报告
-```
-
 ---
 
 ### 🎨 Brand Guidelines / 品牌指南
@@ -1416,30 +968,16 @@ Claude 会使用 brand-guidelines 技能
 确保符合品牌规范
 ```
 
-**举例 / Example**:
-```
-任务：创建品牌组件
+</details>
 
-标准：
-颜色：
-- 主色：#4A6FA5（蓝色）
-- 文字：#1E293B（深灰）
-- 背景：#F8FAFC（浅灰）
-
-字体：
-- 标题：Inter，700
-- 正文：Inter，400
-
-语气：
-- 专业但平易近人
-- 清晰简洁
-
-结果：符合品牌规范的组件
-```
+[⬆️ 回到顶部 / Back to Top](#-claude-skills-快速参考--quick-reference)
 
 ---
 
 ## 📊 使用场景总览 / Usage Scenarios Overview
+
+<details>
+<summary><strong>📖 点击展开工作流程 / Click to Expand Workflows</strong></summary>
 
 ### 🚀 完整开发流程 / Complete Development Flow
 ```
@@ -1471,9 +1009,14 @@ PDF提取数据 → Excel分析 → Word生成报告 → PowerPoint演示
 算法艺术 → algorithmic-art → Canvas动画 → canvas-design → GIF动画 → slack-gif-creator → 主题应用 → theme-factory
 ```
 
+</details>
+
 ---
 
 ## 💡 快速查找指南 / Quick Find Guide
+
+<details>
+<summary><strong>📖 点击展开查找指南 / Click to Expand Guide</strong></summary>
 
 ### 我想... / I want to...
 
@@ -1511,9 +1054,14 @@ PDF提取数据 → Excel分析 → Word生成报告 → PowerPoint演示
 → 内部沟通 → internal-comms
 → 品牌应用 → brand-guidelines
 
+</details>
+
 ---
 
 ## 🎯 技能组合建议 / Skill Combinations
+
+<details>
+<summary><strong>📖 点击展开最佳组合 / Click to Expand Combinations</strong></summary>
 
 ### 最佳组合 / Best Combinations
 
@@ -1558,15 +1106,21 @@ notebooklm-skill (查询技术文档) + planning-with-files (记录发现) +
 test-driven-development (基于真实 API 实现)
 ```
 
+</details>
+
 ---
 
 ## 🔖 书签 / Bookmarks
+
+<details>
+<summary><strong>📖 点击展开书签 / Click to Expand Bookmarks</strong></summary>
 
 ### 按用途查找 / Find by Purpose
 - 🚀 [开始新项目](#-软件开发技能14个-software-development-14)
 - 📄 [处理文档](#-文档处理技能4个-document-processing-4)
 - 🌐 [开发Web应用](#-web开发技能3个-web-development-3)
 - 🎨 [创建视觉内容](#-视觉媒体技能4个-visual--media-4)
+- 📚 [研究与高级工作流](#-研究与高级工作流技能2个-research--advanced-workflows-2)
 - 🔧 [扩展工具](#-工具技能5个-tools-5)
 
 ### 按场景查找 / Find by Scenario
@@ -1576,6 +1130,10 @@ test-driven-development (基于真实 API 实现)
 - 🎨 [设计界面](#-frontend-design前端uiux设计)
 - 🧪 [测试应用](#-webapp-testing-web应用测试)
 
+</details>
+
 ---
 
-_💡 提示：技能会自动识别上下文并调用！也可以手动使用 `/skill-name` 命令_
+_💡 提示：点击每个类别的标题可以展开/折叠内容。技能会自动识别上下文并调用！也可以手动使用 `/skill-name` 命令_
+
+_💡 Tip: Click on category headers to expand/collapse content. Skills auto-detect context! You can also use `/skill-name` command manually_
