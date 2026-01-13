@@ -6,7 +6,7 @@ __Comprehensive bilingual guide for Claude Code skills__
 
 __Claude Code 技能的全面双语指南__
 
-![GitHub repo size](https://img.shields.io/badge/skills-30-blue)
+![GitHub repo size](https://img.shields.io/badge/skills-32-blue)
 ![GitHub language count](https://img.shields.io/badge/format-markdown-purple)
 ![GitHub last commit](https://img.shields.io/badge/status-complete-green)
 
@@ -57,6 +57,10 @@ __Claude Code 技能的全面双语指南__
 - 📢 **Internal Comms** - Company communication templates / 内部沟通模板
 - 🎨 **Brand Guidelines** - Anthropic brand standards / Anthropic 品牌指南
 
+### 📚 Research & Advanced Workflows Skills / 研究与高级工作流技能（2个）
+- 🗂️ **Planning with Files** - Persistent file-based planning / 持久化文件规划
+- 🔍 **NotebookLM** - AI-powered document research / AI 驱动的文档研究
+
 ---
 
 ## 🚀 Quick Start / 快速开始
@@ -86,6 +90,8 @@ __Claude Code 技能的全面双语指南__
    - Web 开发（设计、构建、测试）
    - Visual creation (art, animation, themes)
    - 视觉创作（艺术、动画、主题）
+   - Research & Advanced workflows (persistent planning, AI-powered research)
+   - 研究与高级工作流（持久化规划、AI 驱动研究）
 
 ---
 
@@ -173,10 +179,13 @@ Art, animation, themes / 艺术、动画、主题
 ### 🔧 [Tool Skills (5)](./guides/05-tools.md)
 Skills, MCP, collaboration / 技能、MCP、协作
 
+### 📚 [Research & Advanced Workflows Skills (2)](./guides/06-research-and-advanced-workflows.md)
+Persistent planning, AI-powered research / 持久化规划、AI 驱动研究
+
 ---
 
 ### 📚 [Quick Reference - 快速参考](./QUICK_REFERENCE_ALL_SKILLS.md)
-所有30个技能的一页总览 / One-page overview of all 30 skills
+所有32个技能的一页总览 / One-page overview of all 32 skills
 
 ---
 
@@ -272,6 +281,7 @@ This guide is based on the amazing work from the following repositories:
 |------|---------------|
 | 2025-01-13 | Initial deployment of 30 skills / 30 个技能的初始部署 |
 | 2025-01-13 | Created comprehensive bilingual guides / 创建全面的双语指南 |
+| 2025-01-13 | Added Research & Advanced Workflows skills (2) / 添加研究与高级工作流技能（2个） |
 
 ---
 

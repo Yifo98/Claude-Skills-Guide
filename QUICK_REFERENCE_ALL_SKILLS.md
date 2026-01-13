@@ -1106,6 +1106,125 @@ Claude 会使用 theme-factory 技能
 
 ---
 
+## 📚 研究与高级工作流技能（2个） / Research & Advanced Workflows (2)
+
+### 🗂️ Planning with Files / 文件规划
+
+**是什么 / What**:
+像给 AI 配了个"外置硬盘"当作工作记忆，所有重要的规划、发现、进度都持久化保存
+
+**能做什么 / Capabilities**:
+- 防止目标漂移（50+工具调用后目标仍在）
+- 追踪所有错误（永不重复失败）
+- 构建知识库（研究发现的持久化存储）
+- 跨会话保持上下文（文件系统作为扩展记忆）
+
+**什么时候用 / When to Use**:
+- 复杂的多步骤任务（3+步骤）
+- 研究项目（需要积累知识）
+- 需要 50+ 次工具调用的任务
+- 跨多次会话的长时间任务
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："开始这个复杂任务"
+Claude 会自动创建三个文件：
+- task_plan.md - 任务计划和进度
+- findings.md - 研究发现
+- progress.md - 会话日志
+```
+
+**举例 / Example**:
+```
+任务："构建完整的用户认证系统"
+
+技能会：
+1️⃣ 创建 task_plan.md
+   - 阶段 1-4，每个阶段多个步骤
+   - 进度复选框
+   - 错误追踪表格
+
+2️⃣ 创建 findings.md
+   - OAuth vs JWT 研究结论
+   - 技术决策记录
+   - 重要发现存档
+
+3️⃣ 创建 progress.md
+   - 每次会话的日志
+   - 测试结果记录
+
+✅ 即使上下文重置，所有进度都在文件中！
+```
+
+**关键规则**:
+1. 创建计划文件：开始复杂任务前必须创建 task_plan.md
+2. 2次操作规则：每 2 次查看/搜索操作后立即保存发现
+3. 决策前重读：重大决策前重读计划文件
+4. 记录所有错误：每个错误都记录，防止重复
+
+---
+
+### 🔍 NotebookLM / AI文档查询
+
+**是什么 / What**:
+让 Claude 直接和 Google NotebookLM 对话，基于你上传的文档获取智能答案，完全不瞎编
+
+**能做什么 / Capabilities**:
+- 查询文档获取准确答案（基于源材料）
+- 减少幻觉（仅从上传文档回答）
+- 多文档关联分析（连接 50+ 文档的信息）
+- 自动跟进问题（确保信息完整）
+
+**什么时候用 / When to Use**:
+- 需要查询技术文档（如 React 文档、API 文档）
+- 基于 API 文档写代码（避免幻觉）
+- 研究大型 PDF 集合（学术论文、技术手册）
+- 需要源引用的答案
+
+**怎么用 / How to Use**:
+```
+1. 上传文档到 NotebookLM (notebooklm.google.com)
+2. 分享 Notebook 链接
+3. 告诉 Claude："查询这个 notebook 关于..."
+```
+
+**举例 / Example**:
+```
+任务："基于 React 文档实现自定义 Hook"
+
+传统方法：
+❌ Claude 可能编造不存在的 API
+❌ 需要反复验证代码
+❌ 浪费时间试错
+
+使用 NotebookLM 技能：
+✅ 已上传 React 文档到 NotebookLM
+✅ Claude: "问 React 文档关于自定义 Hook"
+✅ NotebookLM: "基于文档的准确答案 + 引用"
+✅ Claude: 基于真实 API 编写代码
+
+结果：一次写对，没有幻觉！
+```
+
+**核心工作流**:
+1. 一次性设置：`python scripts/run.py auth_manager.py setup`
+2. 创建知识库：上传文档到 NotebookLM 并分享链接
+3. 添加到库：`python scripts/run.py notebook_manager.py add --url "URL"`
+4. 开始查询：`python scripts/run.py ask_question.py --question "..."`
+
+**为什么不用本地 RAG**:
+- Token 消耗：最少（不反复读取文件）
+- 幻觉率：最低（源导向回答）
+- 设置时间：5分钟（无需 embeddings、向量数据库）
+- 答案质量：专家级（Gemini 2.5 合成）
+
+**限制**:
+- 仅限本地 Claude Code（Web UI 不支持）
+- 免费版每日查询限制（50次/天）
+- 需要手动上传文档到 NotebookLM
+
+---
+
 ## 🔧 工具技能（5个） / Tools (5)
 
 ### 🛠️ Skill Creator / 技能创建器
@@ -1325,7 +1444,7 @@ Claude 会使用 brand-guidelines 技能
 ### 🚀 完整开发流程 / Complete Development Flow
 ```
 1. 💡 有想法 → brainstorming
-2. 📋 做计划 → writing-plans
+2. 📋 做计划 → writing-plans (简单) / planning-with-files (复杂)
 3. 🚀 去实施 → subagent-driven-development + test-driven-development
 4. 👁️ 审查 → requesting-code-review + receiving-code-review
 5. ✅ 验证 → verification-before-completion
@@ -1335,6 +1454,11 @@ Claude 会使用 brand-guidelines 技能
 ### 📄 文档自动化流程 / Document Automation Flow
 ```
 PDF提取数据 → Excel分析 → Word生成报告 → PowerPoint演示
+```
+
+### 🔍 智能研究流程 / Intelligent Research Flow
+```
+上传文档到 NotebookLM → notebooklm-skill 查询 → planning-with-files 积累知识 → 生成研究报告
 ```
 
 ### 🌐 Web开发流程 / Web Development Flow
@@ -1376,6 +1500,10 @@ PDF提取数据 → Excel分析 → Word生成报告 → PowerPoint演示
 → Slack GIF → slack-gif-creator
 → 应用主题 → theme-factory
 
+**研究与高级工作流 / Research & Advanced**
+→ 复杂任务规划 → planning-with-files
+→ 智能文档查询 → notebooklm-skill
+
 **工具扩展 / Extend Tools**
 → 创建技能 → skill-creator
 → 构建MCP → mcp-builder
@@ -1416,6 +1544,18 @@ slack-gif-creator + theme-factory
 ```
 writing-plans + doc-coauthoring + internal-comms +
 requesting-code-review + receiving-code-review
+```
+
+**6. 复杂研究项目 / Complex Research Project**
+```
+planning-with-files + notebooklm-skill + systematic-debugging +
+docx/pptx (生成研究报告)
+```
+
+**7. 文档驱动开发 / Document-Driven Development**
+```
+notebooklm-skill (查询技术文档) + planning-with-files (记录发现) +
+test-driven-development (基于真实 API 实现)
 ```
 
 ---
