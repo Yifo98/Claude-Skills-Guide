@@ -56,6 +56,19 @@ brainstorm  writing  TDD  code  verify  finish
 - 要从头设计时 / Starting from scratch
 - 不确定怎么做时 / Unsure how to proceed
 
+**怎么用 / How to Use**:
+```
+直接告诉 Claude 你的想法，技能会自动启动
+Directly tell Claude your idea, the skill will activate automatically
+
+例如 / For example:
+"我想加个用户登录功能"
+"I want to add user login functionality"
+
+Claude 会自动调用 brainstorming 技能
+Claude will automatically invoke brainstorming skill
+```
+
 **举例 / Example**:
 ```
 你说："我想加个用户登录功能"
@@ -159,6 +172,15 @@ You (brainstorming skill):
 - 要开始写代码前 / Before writing code
 - 项目比较复杂时 / For complex projects
 - 需要多人协作时 / For team collaboration
+
+**怎么用 / How to Use**:
+```
+完成头脑风暴后，告诉 Claude："帮我写个实施计划"
+After brainstorming, tell Claude: "Help me write an implementation plan"
+
+Claude 会自动调用 writing-plans 技能
+Claude will automatically invoke writing-plans skill
+```
 
 **举例 / Example**:
 ```
@@ -273,6 +295,15 @@ Implement OAuth authentication with GitHub and Google providers
 - 需要快速开发时 / Need rapid development
 - 项目比较复杂时 / For complex projects
 - 想保证质量时 / Want to ensure quality
+
+**怎么用 / How to Use**:
+```
+当有书面计划时，告诉 Claude："执行这个计划"
+When you have a written plan, tell Claude: "Execute this plan"
+
+Claude 会自动使用 subagent-driven-development
+Claude will automatically use subagent-driven-development
+```
 
 **举例 / Example**:
 ```
@@ -391,6 +422,19 @@ Fix: Add validation, continue
 - 修bug时 / Fixing bugs
 - 重构代码时 / Refactoring code
 - 基本上任何时候都要写代码 / Basically anytime writing code
+
+**怎么用 / How to Use**:
+```
+写代码时，Claude 会自动使用 TDD 流程
+When writing code, Claude will automatically use TDD process
+
+或者告诉 Claude："用TDD方法实现这个功能"
+Or tell Claude: "Implement this feature using TDD"
+
+1. 先写失败的测试 / Write failing test first
+2. 写最小代码让测试通过 / Write minimal code to pass
+3. 重构优化代码 / Refactor and improve code
+```
 
 **举例 / Example**:
 ```
@@ -523,6 +567,15 @@ def add_user(name: str, email: str) -> User:
 - 需要定期检查时 / Need periodic checks
 - 长时间开发时 / Long development sessions
 
+**怎么用 / How to Use**:
+```
+当有详细计划时，告诉 Claude："批量执行这个计划"
+When you have a detailed plan, tell Claude: "Execute this plan in batches"
+
+Claude 会每3个任务暂停检查
+Claude will pause to check after every 3 tasks
+```
+
 **举例 / Example**:
 ```
 计划：9个任务
@@ -648,6 +701,15 @@ Batch 3 (Tasks 7-9):
 - 关闭issue前 / Before closing issues
 - 任何时候声称"搞定了" / Anytime saying "it's fixed"
 
+**怎么用 / How to Use**:
+```
+完成任务后，告诉 Claude："验证一下这个真的修好了吗"
+After completing a task, tell Claude: "Verify this is actually fixed"
+
+Claude 会运行 verification-before-completion
+Claude will run verification-before-completion
+```
+
 **举例 / Example**:
 ```
 Bug："登录时特殊字符会失败"
@@ -739,6 +801,18 @@ Verification:
 - 准备合并代码时 / Ready to merge code
 - 实验不需要时 / Experiment not needed
 - 分支太乱需要清理时 / Branch too messy, need cleanup
+
+**怎么用 / How to Use**:
+```
+功能完成后，告诉 Claude："准备合并这个分支"
+After feature completion, tell Claude: "Ready to merge this branch"
+
+Claude 会使用 finishing-a-development-branch
+Claude will use finishing-a-development-branch
+
+选择合并方式：直接合并 / 创建PR / 丢弃
+Choose merge approach: Direct merge / Create PR / Discard
+```
 
 **举例 / Example**:
 ```
@@ -864,6 +938,16 @@ Alternative: Discard if experiment failed
 - 完成功能后 / After completing features
 - 合并代码前 / Before merging code
 - 被卡住时 / When stuck
+
+**怎么用 / How to Use**:
+```
+完成任务后，告诉 Claude："帮我审查一下这段代码"
+After completing a task, tell Claude: "Help me review this code"
+
+Claude 会自动调用 requesting-code-review
+进行系统化的代码审查
+Conduct systematic code review
+```
 
 **举例 / Example**:
 ```
@@ -998,6 +1082,16 @@ Action: Fix progress indicators, continue
 - 需要回应建议时 / When need to respond to suggestions
 - 不确定建议是否正确时 / Unsure if suggestion is correct
 - 需要讨论技术方案时 / When need to discuss technical approach
+
+**怎么用 / How to Use**:
+```
+收到审查反馈后，告诉 Claude："帮我回应这些建议"
+After receiving review feedback, tell Claude: "Help me respond to this feedback"
+
+Claude 会使用 receiving-code-review
+技术性地评估每条建议
+Technically evaluate each suggestion
+```
 
 **举例 / Example**:
 ```
@@ -1139,6 +1233,15 @@ Reasoning:
 - 不确定哪种方法好时 / Unsure which approach is best
 - 需要新思路时 / Need fresh perspectives
 
+**怎么用 / How to Use**:
+```
+告诉 Claude："同时用几个方法解决这个问题"
+Tell Claude: "Solve this problem using multiple approaches simultaneously"
+
+Claude 会调度并行子代理
+Claude will dispatch parallel subagents
+```
+
 **举例 / Example**:
 ```
 问题："优化慢的数据库查询"
@@ -1265,6 +1368,15 @@ Compare results, choose best approach
 - 测试不同方案时 / Testing different approaches
 - 审查代码时还在开发 / Reviewing code while developing
 
+**怎么用 / How to Use**:
+```
+需要并行开发时，告诉 Claude："创建worktree来并行开发"
+When need parallel development, tell Claude: "Create worktree for parallel development"
+
+Claude 会使用 using-git-worktrees
+Claude will use using-git-worktrees
+```
+
 **举例 / Example**:
 ```
 目录结构：
@@ -1380,6 +1492,16 @@ git worktree remove ../project-feature-a
 - 不知道怎么修时 / Don't know how to fix
 - bug很复杂时 / Complex bugs
 - 需要理解问题时 / Need to understand the problem
+
+**怎么用 / How to Use**:
+```
+遇到bug时，告诉 Claude："帮我系统化地调试这个问题"
+When you encounter a bug, tell Claude: "Help me debug this systematically"
+
+Claude 会使用 systematic-debugging
+有条理地排查问题
+Systematically investigate the issue
+```
 
 **举例 / Example**:
 ```
@@ -1516,6 +1638,15 @@ Bug: "User login fails intermittently"
 - 想了解最佳实践时 / Want to learn best practices
 - 遇到问题时 / When encountering problems
 
+**怎么用 / How to Use**:
+```
+想了解技能使用方法时，告诉 Claude："怎么使用这些技能？"
+When want to learn how to use skills, tell Claude: "How do I use these skills?"
+
+Claude 会使用 using-superpowers
+Claude will use using-superpowers
+```
+
 **举例 / Example**:
 ```
 完整工作流：
@@ -1605,6 +1736,16 @@ finishing-a-development-branch
 - 改进现有技能时 / Improving existing skills
 - 技能文档过时时 / When documentation is outdated
 - 分享技能给他人时 / Sharing skills with others
+
+**怎么用 / How to Use**:
+```
+创建技能时，告诉 Claude："用TDD方法帮我写这个技能的文档"
+When creating a skill, tell Claude: "Use TDD to help me write this skill's documentation"
+
+Claude 会使用 writing-skills
+先用再写，确保文档准确
+Test before documenting, ensure accuracy
+```
 
 **举例 / Example**:
 ```

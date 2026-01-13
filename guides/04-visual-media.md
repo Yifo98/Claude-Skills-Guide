@@ -26,6 +26,46 @@ Visual and media skills enable creation of generative art, animations, and profe
 
 > __Quick Access / 快速访问:__ Use when creating generative art / 创建生成艺术时使用
 
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 用算法和数学模式自动生成艺术作品
+**Use algorithms and mathematical patterns to automatically generate art**
+
+**能做什么 / Capabilities**:
+- 程序化生成图像 / Procedurally generate images
+- 创建数学模式 / Create mathematical patterns
+- 随机艺术创作 / Random art creation
+- 动画和交互 / Animation and interaction
+
+**什么时候用 / When to Use**:
+- 创作数字艺术时 / Creating digital art
+- 生成纹理和图案时 / Generating textures and patterns
+- 创意编程时 / Creative coding
+- 探索生成艺术时 / Exploring generative art
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："创建一些算法艺术"
+Tell Claude: "Create some algorithmic art"
+
+Claude 会使用 algorithmic-art 技能
+Claude will use algorithmic-art skill
+```
+
+**举例 / Example**:
+```
+你说："生成一些抽象艺术"
+
+技能会：
+1️⃣ 使用Perlin噪声生成纹理
+2️⃣ 创建分形图案
+3️⃣ 随机生成形状和颜色
+4️⃣ 组合多种技术
+5️⃣ 输出高质量图像
+
+结果：独一无二的数字艺术作品!
+```
+
 ### Purpose / 作用
 
 Create art using algorithms and mathematical patterns:
@@ -90,6 +130,46 @@ art.save('generative_art.png')
 ## 🖼️ Canvas Design / Canvas 视觉艺术
 
 > __Quick Access / 快速访问:__ Use when creating HTML5 Canvas art / 创建 Canvas 艺术时使用
+
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 使用HTML5 Canvas创建交互式图形和动画
+**Use HTML5 Canvas to create interactive graphics and animations**
+
+**能做什么 / Capabilities**:
+- 绘制形状和路径 / Draw shapes and paths
+- 创建动画效果 / Create animations
+- 复杂可视化 / Complex visualizations
+- 交互式图形 / Interactive graphics
+
+**什么时候用 / When to Use**:
+- 创建数据可视化时 / Creating data visualizations
+- 开发互动图形时 / Developing interactive graphics
+- 需要高性能渲染时 / Need high-performance rendering
+- 创建动画效果时 / Creating animations
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："用Canvas创建一个视觉效果"
+Tell Claude: "Create a visual effect using Canvas"
+
+Claude 会使用 canvas-design 技能
+Claude will use canvas-design skill
+```
+
+**举例 / Example**:
+```
+你说："创建一个动态背景效果"
+
+技能会：
+1️⃣ 设置Canvas元素
+2️⃣ 编写渲染循环
+3️⃣ 添加渐变和动画
+4️⃣ 优化性能
+5️⃣ 处理高DPI显示器
+
+结果：流畅、美观的动画背景!
+```
 
 ### Purpose / 作用
 
@@ -168,6 +248,46 @@ animate();
 ## 🎞️ Slack GIF Creator / Slack 优化的 GIF 动画
 
 > __Quick Access / 快速访问:__ Use when creating GIFs for Slack / 为 Slack 创建 GIF 时使用
+
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 创建专门为Slack优化的动画GIF表情和图片
+**Create animated GIFs and images optimized specifically for Slack**
+
+**能做什么 / Capabilities**:
+- 创建Slack尺寸的GIF / Create Slack-sized GIFs
+- 优化文件大小 / Optimize file size
+- 流畅动画效果 / Smooth animations
+- Emoji和消息GIF / Emoji and message GIFs
+
+**什么时候用 / When to Use**:
+- 为Slack创建表情时 / Creating Slack emojis
+- 添加动画反馈时 / Adding animated feedback
+- 需要轻量GIF时 / Need lightweight GIFs
+- Slack团队沟通时 / Slack team communication
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："为Slack创建一个GIF动画"
+Tell Claude: "Create a GIF animation for Slack"
+
+Claude 会使用 slack-gif-creator 技能
+Claude will use slack-gif-creator skill
+```
+
+**举例 / Example**:
+```
+你说："创建一个'成功'的Slack表情"
+
+技能会：
+1️⃣ 设置128x128尺寸(emoji标准)
+2️⃣ 设计动画帧
+3️⃣ 优化颜色(减少文件大小)
+4️⃣ 设置适当帧率(10-30 FPS)
+5️⃣ 输出优化后的GIF
+
+结果：完美适配Slack的动画表情!
+```
 
 ### Purpose / 作用
 
@@ -259,6 +379,51 @@ y = 400 * (1 - math.sin(t * math.pi))
 ## 🎭 Theme Factory / 主题工厂
 
 > __Quick Access / 快速访问:__ Use when applying themes / 应用主题时使用
+
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 提供10个专业主题,可以让任何内容看起来专业一致
+**Provides 10 professional themes that make anything look professional and consistent**
+
+**能做什么 / Capabilities**:
+- 应用专业配色 / Apply professional color schemes
+- 统一视觉风格 / Unified visual style
+- 快速主题切换 / Quick theme switching
+- 适配不同内容 / Adapt to different content
+
+**什么时候用 / When to Use**:
+- 需要专业外观时 / Need professional appearance
+- 保持品牌一致性时 / Maintaining brand consistency
+- 快速美化内容时 / Quickly beautifying content
+- 创建演示文档时 / Creating presentations
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："为这个内容应用主题"
+Tell Claude: "Apply a theme to this content"
+
+Claude 会使用 theme-factory 技能
+Claude will use theme-factory skill
+```
+
+**举例 / Example**:
+```
+你有：一个普通的网页
+
+技能会：
+1️⃣ 选择合适主题(如Midnight Galaxy)
+2️⃣ 应用配色方案
+3️⃣ 统一字体和样式
+4️⃣ 调整间距和布局
+5️⃣ 确保可访问性
+
+主题选择：
+- Arctic Frost / 北极霜(清爽专业)
+- Midnight Galaxy / 午夜银河(现代科技)
+- Sunset Boulevard / 日落大道(温暖活力)
+
+结果：瞬间变得专业美观!
+```
 
 ### Purpose / 作用
 

@@ -27,6 +27,46 @@ Tool skills provide utilities for creating skills, building MCP servers, collabo
 
 > __Quick Access / 快速访问:__ Use when creating new skills / 创建新技能时使用
 
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 创建新Claude Code技能的工具,帮你组织技能结构
+**Tool for creating new Claude Code skills, helps organize skill structure**
+
+**能做什么 / Capabilities**:
+- 创建技能文件结构 / Create skill file structure
+- 编写YAML前置数据 / Write YAML frontmatter
+- 编写技能文档 / Write skill documentation
+- 测试和验证技能 / Test and validate skills
+
+**什么时候用 / When to Use**:
+- 创建新技能时 / Creating new skills
+- 学习技能格式时 / Learning skill format
+- 组织技能文档时 / Organizing skill documentation
+- 分享技能给他人时 / Sharing skills with others
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："帮我创建一个新技能"
+Tell Claude: "Help me create a new skill"
+
+Claude 会使用 skill-creator 技能
+Claude will use skill-creator skill
+```
+
+**举例 / Example**:
+```
+你说："创建一个数据分析技能"
+
+技能会：
+1️⃣ 创建技能文件夹和SKILL.md
+2️⃣ 编写name和description
+3️⃣ 组织技能内容结构
+4️⃣ 添加使用示例
+5️⃣ 创建最佳实践指南
+
+结果：完整的、可部署的技能!
+```
+
 ### Purpose / 作用
 
 Create new Claude Code skills with proper structure:
@@ -123,6 +163,46 @@ plt.show()
 
 > __Quick Access / 快速访问:__ Use when building MCP servers / 构建 MCP 服务器时使用
 
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 构建MCP(Model Context Protocol)服务器,让Claude能使用外部工具
+**Build MCP servers to let Claude use external tools**
+
+**能做什么 / Capabilities**:
+- 连接外部工具到Claude / Connect external tools to Claude
+- 定义资源和工具 / Define resources and tools
+- 实现服务器逻辑 / Implement server logic
+- 创建可复用的提示 / Create reusable prompts
+
+**什么时候用 / When to Use**:
+- 需要连接外部API时 / Need to connect external APIs
+- 创建自定义工具时 / Creating custom tools
+- 扩展Claude能力时 / Extending Claude capabilities
+- 集成现有系统时 / Integrating existing systems
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："帮我构建一个MCP服务器"
+Tell Claude: "Help me build an MCP server"
+
+Claude 会使用 mcp-builder 技能
+Claude will use mcp-builder skill
+```
+
+**举例 / Example**:
+```
+你说："为我的数据库创建MCP服务器"
+
+技能会：
+1️⃣ 设置MCP服务器结构
+2️⃣ 定义查询工具
+3️⃣ 添加数据表资源
+4️⃣ 实现错误处理
+5️⃣ 编写使用文档
+
+结果：Claude可以直接查询你的数据库!
+```
+
 ### Purpose / 作用
 
 Build Model Context Protocol (MCP) servers:
@@ -200,6 +280,46 @@ async def list_tables() -> str:
 
 > __Quick Access / 快速访问:__ Use when collaborating on documents / 协作文档时使用
 
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 像Google Docs一样,可以多人同时编辑、评论、审查文档
+**Like Google Docs, multiple people can edit, comment, and review documents simultaneously**
+
+**能做什么 / Capabilities**:
+- 跟踪文档变更 / Track document changes
+- 多人协作编辑 / Multiple collaborator editing
+- 版本控制 / Version control
+- 审查和批准 / Review and approval
+
+**什么时候用 / When to Use**:
+- 团队协作文档时 / Team document collaboration
+- 需要反馈时 / Need feedback
+- 审查文档时 / Reviewing documents
+- 合并编辑时 / Merging edits
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："帮我协作文档"
+Tell Claude: "Help me collaborate on this document"
+
+Claude 会使用 doc-coauthoring 技能
+Claude will use doc-coauthoring skill
+```
+
+**举例 / Example**:
+```
+场景：团队正在写项目提案
+
+技能会：
+1️⃣ 设置文档协作结构
+2️⃣ 添加评论(@username: 请审查)
+3️⃣ 跟踪每个人的编辑
+4️⃣ 解决冲突和合并
+5️⃣ 审查和最终批准
+
+结果：团队高效协作完成文档!
+```
+
 ### Purpose / 作用
 
 Enable collaborative document editing:
@@ -265,6 +385,46 @@ Total: $50,000
 ## 📢 Internal Comms / 内部沟通
 
 > __Quick Access / 快速访问:__ Use for company communications / 公司沟通时使用
+
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 创建专业的公司内部沟通模板,让沟通更有效
+**Create professional internal communication templates for more effective communication**
+
+**能做什么 / Capabilities**:
+- 创建公告 / Create announcements
+- 写项目更新 / Write project updates
+- 会议记录 / Meeting notes
+- 行动项跟踪 / Action item tracking
+
+**什么时候用 / When to Use**:
+- 发送团队公告时 / Sending team announcements
+- 汇报项目进度时 / Reporting project progress
+- 记录会议时 / Documenting meetings
+- 分配任务时 / Assigning tasks
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："帮我写个公司公告"
+Tell Claude: "Help me write a company announcement"
+
+Claude 会使用 internal-comms 技能
+Claude will use internal-comms skill
+```
+
+**举例 / Example**:
+```
+你说："项目进展更新"
+
+技能会：
+1️⃣ 使用标准更新模板
+2️⃣ 列出完成项(✅)
+3️⃣ 列出进行中项(🔄)
+4️⃣ 标注阻碍(🚧)
+5️⃣ 明确下一步行动
+
+结果：清晰、专业的项目汇报!
+```
 
 ### Purpose / 作用
 
@@ -339,6 +499,46 @@ Blockers:
 ## 🎨 Brand Guidelines / 品牌指南
 
 > __Quick Access / 快速访问:__ Use when creating branded content / 创建品牌内容时使用
+
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: Anthropic官方品牌标准指南,确保你的内容看起来专业一致
+**Official Anthropic brand standards guide to ensure your content looks professional and consistent**
+
+**能做什么 / Capabilities**:
+- 应用正确的颜色 / Use correct colors
+- 使用标准字体 / Use standard fonts
+- Logo使用规范 / Logo usage guidelines
+- 保持一致的语气 / Maintain consistent voice
+
+**什么时候用 / When to Use**:
+- 创建Anthropic相关内容时 / Creating Anthropic-related content
+- 需要专业外观时 / Need professional appearance
+- 保持品牌一致性时 / Maintaining brand consistency
+- 设计UI组件时 / Designing UI components
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："应用品牌指南到这个内容"
+Tell Claude: "Apply brand guidelines to this content"
+
+Claude 会使用 brand-guidelines 技能
+Claude will use brand-guidelines skill
+```
+
+**举例 / Example**:
+```
+你有：一个普通的按钮
+
+技能会：
+1️⃣ 应用Anthropic蓝色(#4A6FA5)
+2️⃣ 使用Inter字体
+3️⃣ 添加适当的间距
+4️⃣ 确保可访问性
+5️⃣ 保持专业简洁
+
+结果：符合品牌标准的按钮!
+```
 
 ### Purpose / 作用
 

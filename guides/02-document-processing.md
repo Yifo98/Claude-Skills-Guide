@@ -29,6 +29,46 @@ Document processing skills enable manipulation of common office formats includin
 
 > __Quick Access / 快速访问:__ Use when working with PDF files / 处理 PDF 文件时使用
 
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 像个超级文档助手,能从PDF里提取文字、表格、图片,甚至处理扫描的PDF
+**Like a super document assistant that can extract text, tables, images from PDFs, even handle scanned PDFs**
+
+**能做什么 / Capabilities**:
+- 提取带格式的文本 / Extract formatted text
+- 解析复杂的表格 / Parse complex tables
+- 提取所有图片 / Extract all images
+- 用OCR处理扫描PDF / Handle scanned PDFs with OCR
+
+**什么时候用 / When to Use**:
+- 需要从PDF提取数据时 / Need to extract data from PDFs
+- 分析报告或论文时 / Analyzing reports or papers
+- 解析发票或表格时 / Parsing invoices or forms
+- 把PDF转成其他格式时 / Converting PDF to other formats
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："分析这个PDF文件"
+Tell Claude: "Analyze this PDF file"
+
+Claude 会使用 pdf 技能提取和处理内容
+Claude will use pdf skill to extract and process content
+```
+
+**举例 / Example**:
+```
+你有：一份100页的财务报告PDF
+
+技能会：
+1️⃣ 打开PDF文件
+2️⃣ 提取所有文字内容
+3️⃣ 识别并提取所有表格
+4️⃣ 提取图表和图片
+5️⃣ 给你结构化的数据
+
+结果：可以搜索、分析、导出到Excel!
+```
+
 ### Purpose / 作用
 
 Extract and analyze content from PDF documents:
@@ -136,6 +176,45 @@ for page in doc:
 ## 📗 DOCX / Word 文档处理
 
 > __Quick Access / 快速访问:__ Use when creating/editing Word documents / 创建/编辑 Word 文档时使用
+
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 像个Word文档机器人,能自动创建、编辑、格式化Word文档
+**Like a Word document robot that can automatically create, edit, and format Word documents**
+
+**能做什么 / Capabilities**:
+- 自动生成报告 / Auto-generate reports
+- 替换文本内容 / Replace text content
+- 添加表格和图片 / Add tables and images
+- 应用样式和格式 / Apply styles and formatting
+
+**什么时候用 / When to Use**:
+- 批量生成文档时 / Batch generating documents
+- 填充模板时 / Filling templates
+- 自动创建报告时 / Auto-creating reports
+- 处理大量Word文件时 / Processing many Word files
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："帮我创建一个Word文档"
+Tell Claude: "Help me create a Word document"
+
+Claude 会使用 docx 技能
+Claude will use docx skill
+```
+
+**举例 / Example**:
+```
+任务：生成100份个性化合同
+
+技能会：
+1️⃣ 读取合同模板
+2️⃣ 替换姓名、日期等信息
+3️⃣ 保持原有格式
+4️⃣ 生成100个独立文件
+
+节省时间：从几小时缩短到几分钟!
+```
 
 ### Purpose / 作用
 
@@ -258,6 +337,46 @@ for para in doc.paragraphs:
 
 > __Quick Access / 快速访问:__ Use when creating presentations / 创建演示文稿时使用
 
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 像个PPT设计师,能自动创建幻灯片、添加内容、应用主题
+**Like a PPT designer that can auto-create slides, add content, apply themes**
+
+**能做什么 / Capabilities**:
+- 创建各种布局的幻灯片 / Create slides with various layouts
+- 添加文本、图片、图表 / Add text, images, charts
+- 应用主题和动画 / Apply themes and animations
+- 批量生成演示文稿 / Batch generate presentations
+
+**什么时候用 / When to Use**:
+- 快速制作PPT时 / Quickly making PPTs
+- 数据可视化展示时 / Data visualization presentations
+- 批量生成报告时 / Batch generating reports
+- 从数据自动生成幻灯片时 / Auto-generating slides from data
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："帮我创建一个PowerPoint演示文稿"
+Tell Claude: "Help me create a PowerPoint presentation"
+
+Claude 会使用 pptx 技能
+Claude will use pptx skill
+```
+
+**举例 / Example**:
+```
+你有：Excel销售数据表
+
+技能会：
+1️⃣ 分析数据结构
+2️⃣ 创建标题幻灯片
+3️⃣ 为每个产品创建数据幻灯片
+4️⃣ 自动生成图表
+5️⃣ 应用专业主题
+
+结果：几分钟内生成完整演示文稿!
+```
+
 ### Purpose / 作用
 
 Create PowerPoint presentations programmatically:
@@ -379,6 +498,46 @@ prs.save('presentation.pptx')
 ## 📙 XLSX / Excel 电子表格处理
 
 > __Quick Access / 快速访问:__ Use when working with spreadsheets / 处理电子表格时使用
+
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 像个Excel专家,能自动处理数据、创建公式、生成图表
+**Like an Excel expert that can auto-process data, create formulas, generate charts**
+
+**能做什么 / Capabilities**:
+- 读写Excel文件 / Read/write Excel files
+- 添加公式和函数 / Add formulas and functions
+- 创建数据透视表 / Create pivot tables
+- 生成图表和可视化 / Generate charts and visualizations
+
+**什么时候用 / When to Use**:
+- 处理大量数据时 / Processing large amounts of data
+- 自动生成报表时 / Auto-generating reports
+- 数据分析和可视化时 / Data analysis and visualization
+- 批量处理Excel文件时 / Batch processing Excel files
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："帮我处理这个Excel文件"
+Tell Claude: "Help me process this Excel file"
+
+Claude 会使用 xlsx 技能
+Claude will use xlsx skill
+```
+
+**举例 / Example**:
+```
+你有：1000行的销售数据
+
+技能会：
+1️⃣ 读取Excel文件
+2️⃣ 添加计算公式(总计、平均值等)
+3️⃣ 创建数据透视表
+4️⃣ 生成图表(柱状图、折线图)
+5️⃣ 应用专业格式
+
+结果：自动生成完整的分析报告!
+```
 
 ### Purpose / 作用
 

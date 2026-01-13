@@ -25,6 +25,47 @@ Web 开发技能提供使用 React、Tailwind CSS 和 Playwright 设计、构建
 
 > __Quick Access / 快速访问:__ Use when designing UI/UX / 设计 UI/UX 时使用
 
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 像个UI/UX设计师,用React和Tailwind设计现代化的用户界面
+**Like a UI/UX designer that creates modern user interfaces with React and Tailwind**
+
+**能做什么 / Capabilities**:
+- 设计响应式组件 / Design responsive components
+- 应用现代样式 / Apply modern styles
+- 确保可访问性 / Ensure accessibility
+- 快速原型开发 / Rapid prototyping
+
+**什么时候用 / When to Use**:
+- 创建Web应用界面时 / Creating web app interfaces
+- 设计响应式布局时 / Designing responsive layouts
+- 需要现代化UI时 / Need modern UI
+- 快速原型验证时 / Rapid prototype validation
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："帮我设计这个页面"
+Tell Claude: "Help me design this page"
+
+Claude 会使用 frontend-design 技能
+创建 React + Tailwind 组件
+Create React + Tailwind components
+```
+
+**举例 / Example**:
+```
+你说："设计一个登录页面"
+
+技能会：
+1️⃣ 创建响应式布局
+2️⃣ 设计表单组件
+3️⃣ 应用现代化样式
+4️⃣ 添加交互效果
+5️⃣ 确保可访问性
+
+结果：专业、美观、可用的登录界面!
+```
+
 ### Purpose / 作用
 
 Design modern UI/UX with React and Tailwind CSS:
@@ -121,6 +162,46 @@ function LoginForm() {
 
 > __Quick Access / 快速访问:__ Use when creating HTML artifacts / 创建 HTML 构件时使用
 
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 像个前端构建专家,用现代工具创建精美的HTML构件
+**Like a frontend build expert that creates elaborate HTML artifacts with modern tools**
+
+**能做什么 / Capabilities**:
+- 使用Vite构建 / Build with Vite
+- React组件开发 / React component development
+- Tailwind样式 / Tailwind styling
+- 生产就绪的输出 / Production-ready output
+
+**什么时候用 / When to Use**:
+- 创建HTML构件时 / Creating HTML artifacts
+- 需要独立运行的应用时 / Need standalone apps
+- 快速原型验证时 / Rapid prototype validation
+- 分享Demo时 / Sharing demos
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："创建一个Web构件"
+Tell Claude: "Create a web artifact"
+
+Claude 会使用 web-artifacts-builder 技能
+Claude will use web-artifacts-builder skill
+```
+
+**举例 / Example**:
+```
+你说："创建一个数据可视化面板"
+
+技能会：
+1️⃣ 搭建Vite + React项目
+2️⃣ 配置Tailwind CSS
+3️⃣ 创建数据组件
+4️⃣ 添加交互功能
+5️⃣ 优化构建输出
+
+结果：可部署的、性能优异的Web应用!
+```
+
 ### Purpose / 作用
 
 Create elaborate HTML artifacts with modern tools:
@@ -188,6 +269,46 @@ function Artifact() {
 ## 🧪 WebApp Testing / Web 应用测试
 
 > __Quick Access / 快速访问:__ Use when testing web applications / 测试 Web 应用时使用
+
+### 💡 快速理解 / Quick Understanding
+
+**是什么 / What**: 像个测试工程师,用Playwright自动测试Web应用是否正常工作
+**Like a test engineer that uses Playwright to automatically test if web apps work correctly**
+
+**能做什么 / Capabilities**:
+- 自动化浏览器测试 / Automated browser testing
+- 跨浏览器测试 / Cross-browser testing
+- 视觉回归测试 / Visual regression testing
+- 端到端测试 / End-to-end testing
+
+**什么时候用 / When to Use**:
+- 开发Web应用时 / Developing web apps
+- 需要自动化测试时 / Need automated testing
+- 确保多浏览器兼容时 / Ensuring cross-browser compatibility
+- 防止回归bug时 / Preventing regression bugs
+
+**怎么用 / How to Use**:
+```
+告诉 Claude："测试这个应用"
+Tell Claude: "Test this application"
+
+Claude 会使用 webapp-testing 技能
+Claude will use webapp-testing skill
+```
+
+**举例 / Example**:
+```
+你有：一个电商网站
+
+技能会：
+1️⃣ 编写Playwright测试
+2️⃣ 测试登录流程
+3️⃣ 测试购物车功能
+4️⃣ 测试结账流程
+5️⃣ 在Chrome、Firefox、Safari中运行
+
+结果：确保所有功能在所有浏览器中都正常工作!
+```
 
 ### Purpose / 作用
 
